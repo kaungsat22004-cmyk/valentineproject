@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Your Valentine's Surprise 💖</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/surprise.css">
+    <style>
+        .play-btn {
+            background: #ff4d6d; color: white; padding: 1.2rem 2.5rem;
+            border-radius: 50px; font-size: 1.3rem; border: none;
+            cursor: pointer; box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+            transition: 0.4s; margin-top: 1rem;
+        }
+        .play-btn:hover { transform: scale(1.1); background: #ff758f; }
+        #gift-content { display: none; }
+        .letter-text { line-height: 1.8; text-align: left; margin: 20px 0; font-size: 1.1rem; color: #4a4a4a; }
+    </style>
+</head>
+<body class="surprise-body">
+    <div class="surprise-card">
+        <div id="initial-view">
+            <h1>🎉 ပဟေဠိ အောင်မြင်သွားပြီ 🎉</h1>
+            <p>မင်းအတွက် အထူးလက်ဆောင်လေး တစ်ခုရှိတယ်...</p>
+            <button class="play-btn" onclick="startSurprise()">🎁 လက်ဆောင်ကို ဖွင့်ကြည့်ပါ 🎁</button>
+        </div>
+
+        <div id="gift-content">
+            <h1>💕 Happy Valentine’s Day! 💕</h1>
+            <div class="letter-text">
+                <p>My Dearest,</p>
+                <p>Today, as we celebrate our love, I want you to know that my heart belongs to you completely. 
+                I don't just love you for who you are today, but for every version of you we will become together. 
+                No matter how much time passes, you will always be the most beautiful person in my eyes.</p>
+                <p class="personal-quote">"I promise to hold your hand through every season of life. ❤️" </p>
+            </div>
+            <button onclick="window.location.href='index.html'">🔄 Play Again</button>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function startSurprise() {
+            const music = document.getElementById('bgMusic');
+            document.getElementById('initial-view').style.display = 'none';
+            document.getElementById('gift-content').style.display = 'block';
+            music.play().catch(e => console.log("Music play failed"));
+        }
+    </script>
+</body>
+</html>

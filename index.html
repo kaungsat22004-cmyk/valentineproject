@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Valentine's Puzzle 💕</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <h1>💕 တို့နှစ်ယောက်ရဲ့ အချစ်ကို ဆက်စပ်ကြည့်ရအောင် 💕</h1>
+    <div id="stats">
+        <span><span id="pieces-placed">0</span>/16 ခု ဆက်ပြီးပြီ</span>
+    </div>
+    <div id="game-container">
+        <div id="target-grid"></div>
+        <div id="pieces-area">
+            <div id="pieces-container"></div>
+        </div>
+    </div>
+    <div id="message">
+        <h2>🎉 အားလုံး ပြည့်စုံသွားပြီ! 🎉</h2>
+        <p>တို့နှစ်ယောက်ရဲ့ အချစ်ပုံရိပ်လေး... 💖</p>
+    </div>
+
+    <script type="module">
+        import { initDragPuzzle } from './js/puzzle.js';
+        initDragPuzzle('images/couples.png');
+    </script>
+</body>
+</html>
