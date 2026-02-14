@@ -1,0 +1,47 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #fff0f3, #ffe4e6, #fff5f5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4a4a4a;
+    overflow-x: hidden;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+    color: #e91e63;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+#stats {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.1);
+    color: #e91e63;
+    border: 1px solid rgba(233, 30, 99, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+#game-container {
+    margin-bottom: 160px; /* Pieces area နဲ့ မထပ်အောင် နေရာချန်တာပါ */
+    padding-bottom: 2rem;
+}

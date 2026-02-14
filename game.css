@@ -1,0 +1,60 @@
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 160px;
+}
+
+#target-grid {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 5px solid #fff;
+    border-radius: 0; /* Grid ကို လေးထောင့်ထားမယ် */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#pieces-area {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow-x: auto;
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: 1000;
+    border-top: 2px solid #ffccd5;
+}
+
+#pieces-container {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    padding: 10px;
+}
+
+.piece {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    cursor: grab;
+    border-radius: 0; /* ထောင့်ဝိုင်းခြင်းကို ဖယ်ရှားလိုက်သည် */
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* နေရာမှန်ရောက်သွားသော အပိုင်းအစ */
+.piece.placed {
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+    border-radius: 0; /* လေးထောင့်အတိအကျဖြစ်စေရန် */
+}
+
+#ghost-image {
+    width: 100%; height: 100%; opacity: 0.15; filter: grayscale(1);
+    border-radius: 0;
+}
